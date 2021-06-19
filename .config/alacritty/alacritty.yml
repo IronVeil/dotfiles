@@ -1,6 +1,13 @@
 # Alacritty configuration file
 # By IronVeil
 
+# Window
+window:
+        padding:
+                x: 4
+                y: 4
+
+
 # Colors
 colors:
         primary:
@@ -49,3 +56,24 @@ colors:
                 magenta:                "#8f3f71"
                 cyan:                   "#427b58"
                 white:                  "#928374"
+
+
+# Font
+font:
+        normal:
+                family:                 "FuraCode Nerd Font"
+                style:                  Regular
+
+        bold:
+                family:                 "FuraCode Nerd Font"
+                style:                  Bold
+
+        italic:
+                family:                 "FuraCode Nerd Font"
+                style:                  Italic
+
+        bold_italic:
+                family:                 "FuraCode Nerd Font"
+                style:                  Bold Italic
+
+        size: 9

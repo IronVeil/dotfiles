@@ -1,0 +1,47 @@
+#! /bin/sh
+
+# BSPWM Configuration FIle
+# By IronVeil
+
+# Workspaces
+bspc monitor -d 		1 2 3 4 5 6 7 8 9 0
+
+
+# Keybindings
+pgrep -x sxhkd >> /dev/null || sxhkd &
+setxkbmap gb
+
+
+# Borders
+bspc config border_width	4
+bspc config window_gap		0
+
+
+# Wallpaper
+/home/jamie/.fehbg
+
+
+# Polybar
+/home/jamie/Scripts/polybar.sh &
+
+
+# Compositor
+xcompmgr &
+
+
+# Windows
+bspc config focus_follows_mouse	true
+
+
+# Monocles
+bspc config borderless_monocle 	true
+bspc config gapless_monocle 	true
+
+
+# Files
+mega-cmd-server &
+
+
+# Keyring
+eval "$(ssh-agent -s)" &
+gnome-keyring-daemon

@@ -1,0 +1,28 @@
+# SXHKD Configuration File
+# By IronVeil
+
+# System
+XF86MonBrightnessUp
+	light -A 5
+
+XF86MonBrightnessDown
+	light -U 5
+
+
+# Window Manager
+super + {_,shift +}{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + {_,shift +} q
+	bspc node -{c,k}
+
+super + alt + {q,r}
+	/usr/bin/systemctl {shutdown,reboot}
+
+
+# Programs
+super + Return
+	alacritty
+
+super + alt + 1
+	firefox

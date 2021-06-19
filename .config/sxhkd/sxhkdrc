@@ -17,7 +17,7 @@ super + {_,shift +} q
 	bspc node -{c,k}
 
 super + alt + {q,r}
-	/usr/bin/systemctl {shutdown,reboot}
+	/usr/bin/systemctl {poweroff,reboot}
 
 
 # Programs

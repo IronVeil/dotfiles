@@ -1,12 +1,105 @@
+; Polybar Configuration File
+; By IronVeil
+
+; Colors
 [colors]
 bg = #282828
-fg = ebdbb2
+fg = #ebdbb2
 
+grey = #928374
+red = #cc241d
+green = #98971a
+
+
+; Top Bar
 [bar/top]
 width = 100%
 height = 24
 
-modules-left = bspwm
+; Colors
+background = ${colors.bg}
+foreground = ${colors.fg}
 
+; Fonts
+font-0 = FuraCode Nerd Font:style=Regular:size=12;3
+
+; Modules
+modules-left = bspwm window
+modules-right = network volume battery time
+
+
+; BSPWM Module
 [module/bspwm]
 type = internal/bspwm
+
+; Current Workspace
+label-focused-background = ${colors.fg}
+label-focused-foreground = ${colors.bg}
+label-focused-padding-right = 1
+
+; Occupied Workspace
+label-occupied-padding-right = 1
+
+; Empty workspace
+label-empty-foreground = ${colors.grey}
+label-empty-padding-right = 1
+
+
+; Current Window Module
+[module/window]
+type = internal/xwindow
+
+; Label
+label-padding = 1
+label-background = ${colors.fg}
+label-foreground = ${colors.bg}
+
+
+; Volume Module
+[module/volume]
+type = internal/pulseaudio
+use-ui-max = false
+
+
+; Battery Module
+[module/battery]
+type = internal/battery
+
+; Full
+format-full =  Full
+format-full-padding = 1
+
+; Charging
+format-charging = <ramp-capacity> <label-charging>
+format-charging-padding = 1
+format-charging-foreground = ${colors.green}
+
+; Else
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-padding = 1
+
+; Changing Logo
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+
+
+; Time Module
+[module/time]
+type = internal/date
+
+; Format
+date = %H:%M
+date-alt = %H:%M %d/%m/%Y
+
+; Label
+format-padding = 1
+format-background = ${colors.fg}
+format-foreground = ${colors.bg}

@@ -1,0 +1,12 @@
+[colors]
+bg = #282828
+fg = ebdbb2
+
+[bar/top]
+width = 100%
+height = 24
+
+modules-left = bspwm
+
+[module/bspwm]
+type = internal/bspwm

@@ -40,8 +40,3 @@ bspc config gapless_monocle 	true
 
 # Files
 mega-cmd-server &
-
-
-# Keyring
-eval "$(ssh-agent -s)" &
-gnome-keyring-daemon

@@ -53,12 +53,44 @@ type = internal/xwindow
 label-padding = 1
 label-background = ${colors.fg}
 label-foreground = ${colors.bg}
+label-maxlen = 75
+
+
+; Network Module
+[module/network]
+type = internal/network
+interface = wlp3s0
+
+; Connected
+format-connected = 直
+format-connected-padding = 1
+
+; Disconnected
+format-disconnected = 睊
+format-disconnected-padding = 1
+format-disconnected-foreground = ${colors.red}
 
 
 ; Volume Module
 [module/volume]
 type = internal/pulseaudio
 use-ui-max = false
+
+; Volume
+format-volume = <ramp-volume> <label-volume>
+format-volume-padding = 1
+format-volume-background = ${colors.fg}
+format-volume-foreground = ${colors.bg}
+
+; Muted
+format-muted = 婢 Mute
+format-muted-padding = 1
+format-muted-background = ${colors.red}
+
+; Changing Volume
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
 
 
 ; Battery Module
